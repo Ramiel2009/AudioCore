@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="org.apache.commons:com.springsource.org.apache.commons.fileupload:1.2.1" type="repository">
+    <properties maven-id="org.apache.commons:com.springsource.org.apache.commons.fileupload:1.2.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/com.springsource.org.apache.commons.fileupload/1.2.1/com.springsource.org.apache.commons.fileupload-1.2.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/portlet/com.springsource.javax.portlet/1.0.0/com.springsource.javax.portlet-1.0.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/com.springsource.javax.servlet/2.4.0/com.springsource.javax.servlet-2.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
