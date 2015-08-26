@@ -3,8 +3,8 @@
  */
 public class SqlQuery {
 
-    private String queryInsertMetadata = "INSERT INTO metadata (track, artist, title, album, year, genre, md5)" +
-            " VALUES (?, ?, ?, ?, ?, ?, ?)";
+    private String queryInsertMetadata = "INSERT INTO metadata (track, artist, title, album, year, genre, md5, url)" +
+            " VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
     public String getQueryInsertMetadata() {
         return queryInsertMetadata;

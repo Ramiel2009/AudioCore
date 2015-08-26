@@ -13,8 +13,24 @@ import java.util.ArrayList;
  * Created by Maxim on 8/5/15.
  */
 public class AudioMetadata {
+    public String getRemoteFolder() {
+        return remoteFolder;
+    }
 
+    public void setRemoteFolder(String remoteFolder) {
+        this.remoteFolder = remoteFolder;
+    }
 
+    private String remoteFolder = "";
+    private String remoteServerAddress = "";
+
+    public String getRemoteServerAddress() {
+        return remoteServerAddress;
+    }
+
+    public void setRemoteServerAddress(String remoteServerAddress) {
+        this.remoteServerAddress = remoteServerAddress;
+    }
 
     public ArrayList<String> getMp3MetadataList(String pathToMp3) throws NoSuchAlgorithmException {
         ArrayList<String> mp3MetadataList = new ArrayList<String>();
@@ -41,9 +57,11 @@ public class AudioMetadata {
                     mp3MetadataList.add(id3v1Tag.getGenreDescription());
                     MD5Checksum md5 = new MD5Checksum(); //getting MD5 checksum
                     String m = md5.getMD5Checksum(pathToMp3);
-                    System.out.println("MD5: "+m);
+                    System.out.println("MD5: " + m);
                     mp3MetadataList.add(m);
-
+                    this.setRemoteServerAddress("http://94.244.34.33");
+                    this.setRemoteFolder("/home/ap/Desktop/apache-tomcat-7.0.63/webapps/data/");
+                    mp3MetadataList.add(remoteServerAddress+remoteFolder+UploadServlet.mp3FileName);
             }
         } catch (UnsupportedTagException e) {
             System.err.println("File not found.");

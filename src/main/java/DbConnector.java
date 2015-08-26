@@ -68,6 +68,7 @@ public class DbConnector {
                 insertMetadataStatement.setString(5, s.get(4));
                 insertMetadataStatement.setString(6, s.get(5));
                 insertMetadataStatement.setString(7, s.get(6));
+                insertMetadataStatement.setString(8, s.get(7));
                 insertMetadataStatement.execute();
             }
             else

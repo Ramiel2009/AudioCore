@@ -16,7 +16,10 @@ import org.apache.log4j.Logger;
 /**
  * Servlet implementation class UploadServlet
  */
+
+
 public class UploadServlet extends HttpServlet {
+    public static String mp3FileName;
 	private static final long serialVersionUID = 1L;
 
 	private static final String DATA_DIRECTORY = "data";
@@ -48,7 +51,7 @@ public class UploadServlet extends HttpServlet {
 
 		// constructs the folder where uploaded file will be stored
 		
-		String uploadFolder = "/home/ap/Desktop/" + File.separator
+		String uploadFolder = "/home/ap/Desktop/apache-tomcat-7.0.63/webapps/" + File.separator
 				+ DATA_DIRECTORY;
 		log.info("folder for uploading has been set");
 
@@ -76,6 +79,7 @@ public class UploadServlet extends HttpServlet {
 				FileItem item = (FileItem) iter.next();
 				
 				String fileName = new File(item.getName()).getName();
+                mp3FileName = fileName;
 				if (!item.isFormField()) {
 					String filePath = uploadFolder + File.separator + fileName;
 					File uploadedFile = new File(filePath);
